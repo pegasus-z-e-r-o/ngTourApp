@@ -1,0 +1,24 @@
+/* mat-sidenav-content {
+  background: rgb(242, 119, 43);
+  background: linear-gradient(
+    176deg,
+    rgba(242, 119, 43, 1) 0%,
+    rgba(255, 255, 255, 1) 48%,
+    rgba(6, 251, 51, 1) 100%
+  );
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  justify-content: center;
+  text-align: center;
+} */
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+b {
+  font-size: x-large;
+}
