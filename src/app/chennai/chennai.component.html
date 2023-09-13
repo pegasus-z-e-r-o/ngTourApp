@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row my-1">
+    <div
+      *ngFor="let place of places; let i = index"
+      class="col-12 col-sm-12 col-md-6 col-lg-3"
+    >
+      <div class="card my-1">
+        <img [src]="place.img" [alt]="place.altname" class="card-img-top" />
+        <div class="card-body">
+          <div class="card-title">
+            <h4>{{ place.title | titlecase }}</h4>
+          </div>
+          <div class="card-text">
+            <P>{{ place.text | titlecase }}</P>
+          </div>
+          <button
+            *ngIf="!isLiked"
+            class="btn btn-dark mx-1 px-3"
+            (click)="likedPlaces(place.id!)"
+          >
+            <i class="fa-solid fa-heart"></i>
+          </button>
+          <button
+            *ngIf="isLiked"
+            class="btn btn-danger mx-1 px-3"
+            (click)="likedPlaces(place.id!)"
+          >
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <button class="btn btn-dark px-3">
+            <i class="fa-solid fa-share-nodes"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+1

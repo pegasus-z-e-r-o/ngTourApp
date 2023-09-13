@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tourApp';
+  
+ myFunction() {
+  var element = document.body;
+  element.dataset['bsTheme'] = element.dataset['bsTheme'] =="light" ?  "dark" : "light";  
+  }
 }
