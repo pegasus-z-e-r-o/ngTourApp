@@ -1,44 +1,91 @@
-<nav class="navbar navbar-expand-lg bg-light border text-white">
-  <div class="container-fluid">
-    <!-- <a href="../assets/images/main/welcome.webp" -->
-    <a href="#"
-      ><b class="lead px-1"
-        >T<i class="fa-solid fa-earth-americas" style="font-size: 22px"></i>UR
-        CLUB</b
-      >
-    </a>
-    <form action="#">
-      <mat-slide-toggle></mat-slide-toggle>
+<div class="wrapper p-0 m-0 g-0">
+  <div class="content p-0 m-0 g-0">
+    <nav class="navbar navbar-expand-lg border-bottom text-white">
+      <div class="container-fluid">
+        <button (click)="drawer.toggle()" mat-button>
+          <mat-icon class="content-text">menu</mat-icon>
+        </button>
+        <a href="#"
+          ><b class="content-text lead"
+            >T<i class="fa-solid fa-earth-americas" style="font-size: 22px"></i
+            >UR CLUB</b
+          >
+        </a>
 
-      <button routerLink="#" class="btn btn-dark px-3 mx-1">Log In</button>
-      <button class="btn btn-dark mx-1">Register</button>
-    </form>
-  </div>
-</nav>
+        <form action="#">
+          <span
+            class="content-text px-3"
+            (click)="modeToggle()"
+            data-toggle="tooltip"
+            title="Dark/Light Mode"
+          >
+            <i class="fa-solid fa-circle-half-stroke" (click)="onClick()"></i>
+          </span>
 
-<mat-sidenav-container class="bg-dark-subtle" style="height: 91%">
-  <mat-sidenav mode="side" opened>
-    <mat-nav-list class="bg-light" style="width: 200px">
-      <a class="border-bottom" mat-list-item routerLink="chennai">Chennai</a>
-      <a class="border" mat-list-item routerLink="madurai">Madurai</a>
-      <a class="border" mat-list-item routerLink="thanjavur">Thanjavur</a>
-      <a class="border" mat-list-item routerLink="covai">Coimbatore</a>
-      <a class="border" mat-list-item routerLink="kanchipuram">Kanchipuram</a>
-      <a class="border" mat-list-item routerLink="vellore">Vellore</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <!-- <mat-sidenav-content class="p-4 bg-dark-subtle" >
-    <p >
+          <button class="btn btn-dark px-3 mx-1">Log In</button>
+          <button class="btn btn-dark mx-1">Register</button>
+        </form>
+      </div>
+    </nav>
+
+    <mat-sidenav-container class="wrapper" style="height: 87%">
+      <mat-sidenav #drawer mode="side" class="" opened>
+        <mat-nav-list class="wrapper p-0" style="width: 200px">
+          <a class="border-bottom" mat-list-item routerLink="like"
+            ><i class="fa-solid fa-heart content-text"></i
+            ><span class="content-text"> Places</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="chennai"
+            ><span class="content-text">Chennai</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="madurai"
+            ><span class="content-text">Madurai</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="thanjavur"
+            ><span class="content-text">Thanjavur</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="covai"
+            ><span class="content-text">Coimbatore</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="kanchipuram"
+            ><span class="content-text">Kanchipuram</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="thiruvannamalai"
+            ><span class="content-text">Thiruvannamalai</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="velloreV1"
+            ><span class="content-text">Vellore</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="nilgiri"
+            ><span class="content-text">Nilgiri</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="coonoor"
+            ><span class="content-text">Coonoor</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="salem"
+            ><span class="content-text">Salem</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="nagapattinam"
+            ><span class="content-text">Nagapatinam</span></a
+          >
+          <a class="border-bottom" mat-list-item routerLink="dindigul"
+            ><span class="content-text">Dindugal</span></a
+          >
+            <!-- <a class="border-bottom" mat-list-item routerLink="thoothukudi"
+              ><span class="content-text">Thoothukudi</span></a
+            > -->
+        </mat-nav-list>
+      </mat-sidenav>
+
       <router-outlet></router-outlet>
-    </p>
-  </mat-sidenav-content> -->
-  <router-outlet></router-outlet>
-</mat-sidenav-container>
-<!-- <h4>"Welcome to the Enchanting World of Tamil Nadu!"</h4>
-  <h4>"Your adventure begins here. Happy exploring!"</h4> -->
+    </mat-sidenav-container>
 
-<!-- --for adding dark theme using bootstrap
-  data-bs-theme="dark"
-  <div class="form-check form-switch mx-4">
-    <input type="checkbox" role="switch" id="flexSwitchCheck" checked onclick="myFunction()">
-  </div> -->
+    <div>
+      <nav class="navbar-expand-lg border-top fixed-bottom">
+        <div class="content-text text-end p-1 mx-2" style="font-size: 14px">
+          © 2024 All rights reserved. | ganeshk201099@gmail.com
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
