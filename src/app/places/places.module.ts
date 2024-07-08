@@ -55,3 +55,4 @@ const routes: Routes = [
   // exports: [ChennaiComponent, MaduraiComponent, ThanjavurComponent, CoimbatoreComponent],
 })
 export class PlacesModule {}
+
